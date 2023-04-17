@@ -56,6 +56,53 @@
                 border: solid  rgb(0, 255, 0) 1.5px;
             }
         
+            
+        
+
+
+            a{
+                display: inline-block;
+                margin: 10px;
+                position: relative;
+            }
+            a img{
+                width: 100%;
+                display: block;
+            }
+            
+            a:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                transition: all 0.6s;
+            }
+            
+            a:hover:before{
+               background: rgba(0,0,0,.4); 
+            } 
+            
+            a:after{
+                content:'';
+                opacity: 0;
+            }
+            
+            a:hover:after{
+                content: 'Veja';
+                display: block;
+                position: absolute;
+                border: 3px solid white;
+                color: white;
+                top: 50%;
+                left: 50%;
+                padding: 10px 20px;
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }   
+
         </style>
 
     </head>
@@ -78,7 +125,46 @@
             <input type="checkbox">
             <span class="cbox"></span>
             Educação
-        </label>                        
+        </label>   
+        
+        <hr>
+
+        <article>
+            <a href="#">
+                <img src="/Conteudo  Strata/thumbs/01.jpg" alt="">
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="/Conteudo  Strata/thumbs/02.jpg" alt="">
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="/Conteudo  Strata/thumbs/03.jpg" alt="">
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="/Conteudo  Strata/thumbs/04.jpg" alt="">
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="/Conteudo  Strata/thumbs/05.jpg" alt="">
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="/Conteudo  Strata/thumbs/06.jpg" alt="">
+            </a>
+        </article>
+
                                      
     </body>
 </html>
