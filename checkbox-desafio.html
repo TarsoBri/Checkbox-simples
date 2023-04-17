@@ -1,0 +1,84 @@
+<!doctype html>
+<!--doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br"> 
+    <head>
+        <title>Tudo sobre HTML5</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Tarso">
+        <meta name="description" content="Veja algumas características sobre HTML5">
+        <meta name="keyword" content="HTML5, Tecnologia">
+        
+        <style>
+            body{
+                font-family: sans-serif;
+            }
+
+            label{
+                margin-right: 25px;
+            }
+
+
+            input[type="checkbox"]{
+                opacity: 0;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+
+            label .cbox{
+                display: inline-block;
+                width: 45px;
+                height: 25px;
+                background-color: #ccc;
+                border-radius: 12px;
+                position: relative;
+            }
+
+            label .cbox::before{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 4px; bottom: 4px; right: 25px; left: 4px; 
+                border-radius: 50%;
+                background-color: white;
+                transition: all .3s;
+                
+            }
+
+            label input:checked + .cbox:before{
+                transform: translateX(20px);
+                transition: all .3s ease-in-out;
+                background-color: rgb(0, 255, 0);
+            }
+
+            label input:focus + .cbox{
+                box-sizing: border-box;
+                border: solid  rgb(0, 255, 0) 1.5px;
+            }
+        
+        </style>
+
+    </head>
+
+    <body>
+
+        <label>
+            <input type="checkbox">
+            <span class="cbox"></span>
+            Esporte
+        </label>
+
+        <label>
+            <input type="checkbox">
+            <span class="cbox"></span>
+            Politica
+        </label>
+        
+        <label>
+            <input type="checkbox">
+            <span class="cbox"></span>
+            Educação
+        </label>                        
+                                     
+    </body>
+</html>
